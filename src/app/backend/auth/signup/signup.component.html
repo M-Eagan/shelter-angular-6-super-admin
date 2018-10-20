@@ -1,0 +1,45 @@
+<mat-card class="fill-space">
+  <mat-card-title class="form-title">
+    <p class="color-bluejean-blue form-title__text">Sign Up</p>
+  </mat-card-title>
+  <mat-card-content>
+    <form class="form" [formGroup]="signupForm" (ngSubmit)="submitForm(signupForm)">
+      <mat-form-field class="form__field">
+        <input matInput class="form__input" type="text" placeholder="shelter name" formControlName="shelterName" required>
+        <mat-error *ngIf="signupForm.controls.shelterName.invalid">
+          Shelter Name is required.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form__field">
+        <input matInput class="form__input" type="text" placeholder="username" formControlName="username" required>
+        <mat-error *ngIf="signupForm.controls.username.invalid">
+          Name is required.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form__field">
+        <input matInput class="form__input" type="password" placeholder="password" formControlName="password" required>
+        <mat-error *ngIf="signupForm.controls.password.invalid">
+          Password is required.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form__field">
+        <input matInput class="form__input" type="email" placeholder="Email" formControlName="email" required>
+        <mat-error *ngIf="signupForm.controls.email.invalid">
+          Email is required.
+        </mat-error>
+      </mat-form-field>
+      <mat-error class="error-msg" *ngIf="errorMsg">{{errorMsg}}</mat-error>
+      <button mat-button class="button button--login bg-cranberry" type="submit">
+        <mat-error class="button__content" [class.animate-up]="isSubmitting">
+          <span class="button__text">Sign Up</span>
+          <span class="button__loading">
+            <sa-loading-icon [iconColor]="'#fff'"></sa-loading-icon>
+          </span>
+        </mat-error>
+      </button>
+    </form>
+    <div class="divider"></div>
+    <mat-error class="mat-errorider"></mat-error>
+    <a class="color-cranberry auth-link" [routerLink]="['/backend/login']">Login</a>
+  </mat-card-content>
+</mat-card>

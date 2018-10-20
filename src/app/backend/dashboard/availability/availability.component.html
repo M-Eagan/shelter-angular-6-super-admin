@@ -1,0 +1,13 @@
+<mat-grid-list cols="3" rowHeight="200px" class="grid__list">
+  <mat-grid-tile [colspan]="3" [rowspan]="1">
+    <mat-card class="dashboard-card">
+      <mat-card-content class="dashboard-card__content">
+        <article class="card__text">
+          <p class="available-text">{{ inputValue ? '' : 'No'}} Beds Available</p>
+          <p class="updated-text">Last Updated: {{lastUpdated}}</p>
+        </article>
+        <mat-slide-toggle matInput type="text" class="available-input" [formControl]="availability"></mat-slide-toggle>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

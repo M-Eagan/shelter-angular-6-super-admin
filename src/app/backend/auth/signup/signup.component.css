@@ -1,0 +1,16 @@
+:host {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button--login.mat-button {
+  margin-top: 10px;
+}
+
+.error-msg {
+  text-align: center;
+}

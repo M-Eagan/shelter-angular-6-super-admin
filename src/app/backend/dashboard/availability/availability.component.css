@@ -1,0 +1,60 @@
+:host {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: flex-direction 0.4s linear;
+}
+
+@media (min-width: 450px) {
+  :host {
+    flex-direction: row;
+  }
+}
+
+.grid__list {
+  width: 100%;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.button-container {
+  display: flex;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card__content {
+  height: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.available-input {
+  margin-left: 40px;
+}
+
+.availability__card {
+  flex: 1;
+  margin: 5px 0px;
+}
+
+.availability__card p {
+  margin: 0px;
+}
+
+.available-text {
+  font-size: 20px;
+}
+
+.updated-text {
+  font-size: 14px;
+}
